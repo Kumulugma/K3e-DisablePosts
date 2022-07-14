@@ -1,0 +1,75 @@
+# OS generated files
+.DS_Store
+ehthumbs.db
+Thumbs.db
+.Trashes
+
+# Packaged files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Editor files
+.idea/
+nbproject/
+
+# Environment files
+.env
+web.config
+
+# Log files
+*.log
+wp-content/wflogs/
+
+# Dump database files
+*.sql
+*.sqlite
+
+# SEO
+/readme*html
+/robots.txt
+/google*.html
+/sitemap.xml
+
+# Img
+wp-content/webp-express/
+
+# WordPress
+wp-config.php
+wp-content/upgrade/
+wp-content/uploads/
+
+# Dependency files (node/bower/sass etc.)
+.sass-cache/
+bower_components/
+
+# Backup files
+*.bak
+wp-content/updraft/
+wp-content/backup-db/
+wp-content/backups/
+wp-content/aiowps_backups/
+wp-content/envato-backups/
+wp-content/ai1wm-backups/
+
+# Cache files
+wp-content/cache/
+wp-content/wp-rocket-config/
+wp-content/plugins/bwp-minify/cache/
+wp-content/wp-cache-config.php
+wp-content/advanced-cache.php
+wp-content/object-cache.php
+
+# WPML files
+wp-content/languages/wpml/
+
+# Custom files
+/vendor
+
+# Antivirus
+wp-includes/js/wp-emoji-release.min.js
