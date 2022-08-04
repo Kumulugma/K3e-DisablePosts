@@ -8,7 +8,7 @@
   Author URI: https://www.k3e.pl/
   Text Domain:
   Domain Path:
-  Version: 0.0.1a
+  Version: 0.0.2
  */
 require_once 'updater/K3eUpdater.php';
 add_action('init', 'k3e_disable_posts_init');
