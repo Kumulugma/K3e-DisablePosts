@@ -8,7 +8,7 @@
   Author URI: https://www.k3e.pl/
   Text Domain:
   Domain Path:
-  Version: 0.0.2
+  Version: 0.0.3
  */
 require_once 'updater/K3eUpdater.php';
 add_action('init', 'k3e_disable_posts_init');
@@ -21,8 +21,8 @@ Puc_v4_Factory::buildUpdateChecker(
 
 function k3e_disable_posts_init() {
     do_action('k3e_disable_posts_init');
-    
-        add_action('template_redirect', 'post_redirect');
+
+    add_action('template_redirect', 'post_redirect');
 
     function post_redirect() {
         $homepage_id = get_option('page_on_front');
@@ -30,7 +30,7 @@ function k3e_disable_posts_init() {
             wp_redirect(home_url('index.php?page_id=' . $homepage_id));
         }
     }
-    
+
     add_action('admin_menu', 'remove_default_post_type');
 
     function remove_default_post_type() {
@@ -47,6 +47,18 @@ function k3e_disable_posts_init() {
 
     function remove_draft_widget() {
         remove_meta_box('dashboard_quick_press', 'dashboard', 'side');
+    }
+
+    add_action('init', 'k3e_unregister_tags_for_posts');
+
+    function k3e_unregister_tags_for_posts() {
+        unregister_taxonomy_for_object_type('post_tag', 'post');
+    }
+
+    add_action('init', 'k3e_unregister_categories_for_posts');
+
+    function k3e_unregister_categories_for_posts() {
+        unregister_taxonomy_for_object_type('category', 'post');
     }
 
 }
